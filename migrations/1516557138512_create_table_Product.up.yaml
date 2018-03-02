@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "Product"("id" serial NOT NULL, "name" text NOT NULL DEFAULT
+      'To be decided', "price" numeric NOT NULL, "caption" text , "description" text
+      , "colour" text , "Availability" integer , PRIMARY KEY ("id") )
+  type: run_sql
+- args:
+    name: Product
+  type: add_existing_table_or_view

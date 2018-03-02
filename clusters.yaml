@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: beseeching73-hasura
+  data: null
+  kubeContext: beseeching73
+  name: beseeching73

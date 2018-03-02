@@ -1,0 +1,19 @@
+- args:
+    role: anonymous
+    table: Product
+  type: drop_select_permission
+- args:
+    permission:
+      columns:
+      - Availability
+      - caption
+      - colour
+      - description
+      - id
+      - imagename
+      - name
+      - price
+      filter: {}
+    role: anonymous
+    table: Product
+  type: create_select_permission

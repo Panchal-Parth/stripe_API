@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week 1 task test for stripe checkout</title>
+</head>
+<body>
+    <form action="{{ url_for('pay') }}" method="POST">
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{pub_key}}"
+            data-amount="999"
+            data-name="Stripe.com"
+            data-description="Widget"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-zip-code="true">
+        </script>
+        <input type = 'hidden' name = 'amount' value="999" />
+        <input type = 'hidden' name = 'description' value="test product 1 : test description" />
+</form>
+</body>
+</html>

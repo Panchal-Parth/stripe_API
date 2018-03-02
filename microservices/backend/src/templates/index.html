@@ -1,0 +1,258 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
+	<script type="text/javascript">//<![CDATA[
+		$(window).load(function(){
+		var handler = StripeCheckout.configure({
+		    key: 'pk_test_XHk0TSUcuCtRqfWNZU3iaVYM',
+		    token: function(token) {
+		        $("#stripeToken").val(token.id);
+		        $("#stripeEmail").val(token.email);
+		        $("#myForm").submit();
+		    }
+		  });
+
+		  $('#customButton').on('click', function(e) {
+		    var amount = $("#amount").val();
+		    // Open Checkout with further options
+		    handler.open({
+		      name: 'Demo Site',
+		      description: '2 widgets ($20.00)',
+		      amount: amount
+		    });
+		    e.preventDefault();
+		  });
+
+		  // Close Checkout on page navigation
+		  $(window).on('popstate', function() {
+		    handler.close();
+		  });
+		});//]]> 
+
+		//pay button 2 starts
+		$(window).load(function(){
+		var handler = StripeCheckout.configure({
+		    key: 'pk_test_XHk0TSUcuCtRqfWNZU3iaVYM',
+		    token: function(token) {
+		        $("#stripeToken").val(token.id);
+		        $("#stripeEmail").val(token.email);
+		        $("#myForm2").submit();
+		    }
+		  });
+
+		  $('#customButton').on('click', function(e) {
+		    var amount = $("#amount").val();
+		    // Open Checkout with further options
+		    handler.open({
+		      name: 'Demo Site',
+		      description: '2 widgets ($20.00)',
+		      amount: amount
+		    });
+		    e.preventDefault();
+		  });
+
+		  // Close Checkout on page navigation
+		  $(window).on('popstate', function() {
+		    handler.close();
+		  });
+		});//]]>
+
+		//pay button 3
+		$(window).load(function(){
+		var handler = StripeCheckout.configure({
+		    key: 'pk_test_XHk0TSUcuCtRqfWNZU3iaVYM',
+		    token: function(token) {
+		        $("#stripeToken").val(token.id);
+		        $("#stripeEmail").val(token.email);
+		        $("#myForm3").submit();
+		    }
+		  });
+
+		  $('#customButton').on('click', function(e) {
+		    var amount = $("#amount").val();
+		    // Open Checkout with further options
+		    handler.open({
+		      name: 'Demo Site',
+		      description: '2 widgets ($20.00)',
+		      amount: amount
+		    });
+		    e.preventDefault();
+		  });
+
+		  // Close Checkout on page navigation
+		  $(window).on('popstate', function() {
+		    handler.close();
+		  });
+		});//]]>
+
+	</script>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<!--Navbar -->
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">Logo</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">JavaScript</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--/Navbar -->
+
+	<!--test  button 1 -->
+	<form id="myForm" action="{{ url_for('pay') }}" method="POST">
+		<input type="hidden" id="product"  name="product" value="tshirt">
+	    <input type="hidden" id="amount" name="amount" value="1000">
+	    <input type="hidden" id="stripeToken" name="stripeToken">
+	    <input type="hidden" id="stripeEmail" name="stripeEmail">
+	</form>
+	<input type="button" id="customButton" value="pay">
+  
+  	<script>
+	  // tell the embed parent frame the height of the content
+	  if (window.parent && window.parent.parent){
+	    window.parent.parent.postMessage(["resultsFrame", {
+	      height: document.body.getBoundingClientRect().height,
+	      slug: "ra010dby"
+	    }], "*")
+	  }
+	</script>
+
+	<iframe frameborder="0" allowtransparency="true" src="https://checkout.stripe.com/m/v3/index-cc6c2e460382d351e332c80204e2fc6e.html?distinct_id=42bc8d18-0fa5-dd6e-2d11-eff80c7083e5" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; background: rgba(0, 0, 0, 0.004); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;">
+	</iframe>
+	<!--/test  button1 -->
+
+
+
+
+
+	<div class="container">
+		<div class="row" id="features">
+			<div class="row">
+				<div class="col s12 m7">
+					<div class="card">
+						<div class="card-image">
+						<img src="assets/img/wja/inter.png">
+							<span class="card-title">Card Title</span>
+						</div>
+						<div class="card-content">
+							<p>I am a very simple card. I am good at containing small bits of information.
+								I am convenient because I require little markup to use effectively.</p>
+							</div>
+							<div class="card-action">
+								<a href="#">This is a link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" align=center>
+					<img src="assets/img/wja/inter.png" class="center-img-wja"> 
+				</div>
+				<h4 align=center>Product 1 </h4>
+				ACM's Special Interest Groups (SIGs) represent major areas of computing, addressing the interests of technical communities that drive innovation. SIGs offer a wealth of conferences, publications and activities focused on specific computing sub-disciplines. They enable members to share expertise, discovery and best practices.Participation in ACM Distinguished Speakers Program
+				<!--test  button 2 -->
+				<form id="myForm2" action="{{ url_for('pay2') }}" method="POST">
+				    <input type="hidden" id="amount" name="amount" value="10">
+				    <input type="hidden" id="stripeToken" name="stripeToken">
+				    <input type="hidden" id="stripeEmail" name="stripeEmail">
+				</form>
+				<input type="button" id="customButton" value="pay">
+			  
+			  	<script>
+				  // tell the embed parent frame the height of the content
+				  if (window.parent && window.parent.parent){
+				    window.parent.parent.postMessage(["resultsFrame", {
+				      height: document.body.getBoundingClientRect().height,
+				      slug: "ra010dby"
+				    }], "*")
+				  }
+				</script>
+
+				<iframe frameborder="0" allowtransparency="true" src="https://checkout.stripe.com/m/v3/index-cc6c2e460382d351e332c80204e2fc6e.html?distinct_id=42bc8d18-0fa5-dd6e-2d11-eff80c7083e5" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; background: rgba(0, 0, 0, 0.004); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;">
+				</iframe>
+				<!--/test  button1 -->     
+		</div>
+		<div class="col s4">
+			<div class="row" align=center>
+				<img src="/templates/assets/img/wja/level.png" class="center-img-wja"> 
+			</div>
+			<h4 align=center>Product 2 </h4>
+			ACM’s educational activities, conducted primarily through our Education Board and Council, range from the K-12 space (CSTA) and two-year programs to undergraduate, graduate, and doctoral-level education, and professional development for computing practitioners at every stage of their career
+		</br>
+	</br>
+</br>
+</br>
+<!--test  button 3 -->
+	<form id="myForm3" action="{{ url_for('pay3') }}" method="POST">
+	    <input type="hidden" id="amount" name="amount" value="10">
+	    <input type="hidden" id="stripeToken" name="stripeToken">
+	    <input type="hidden" id="stripeEmail" name="stripeEmail">
+	</form>
+	<input type="button" id="customButton" value="pay">
+  
+  	<script>
+	  // tell the embed parent frame the height of the content
+	  if (window.parent && window.parent.parent){
+	    window.parent.parent.postMessage(["resultsFrame", {
+	      height: document.body.getBoundingClientRect().height,
+	      slug: "ra010dby"
+	    }], "*")
+	  }
+	</script>
+
+	<iframe frameborder="0" allowtransparency="true" src="https://checkout.stripe.com/m/v3/index-cc6c2e460382d351e332c80204e2fc6e.html?distinct_id=42bc8d18-0fa5-dd6e-2d11-eff80c7083e5" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; background: rgba(0, 0, 0, 0.004); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;">
+	</iframe>
+	<!--/test  button2 --> 
+</div>
+<div class="col s4">
+	<div class="row" align=center>
+		<img src="/templates/assets/img/wja/lib.png" class="center-img-wja"> 
+	</div>
+	<h4 align=center>Product 3</h4>
+	The option to subscribe to the full ACM Digital Library, which includes over 2 million pages of text.
+	Learning Center with resources for lifelong learning, including online courses targeted toward essential IT skills and popular certifications; online books & videos from Skillsoft, Morgan Kaufmann and Syngress; videos and webinars on hot topics, presented by today's innovators.
+</br>
+</br>
+</div>
+
+</div>	
+<!--
+<form action=" {{ url_for('pay') }} " method="POST">
+	<script
+	src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	data-key="pk_test_XHk0TSUcuCtRqfWNZU3iaVYM"
+	data-amount="9900"
+	data-name="Demo Site"
+	data-description="Widget"
+	data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+	data-locale="auto">
+</script>
+</form>
+-->
+</div>
+</body>
+</html>

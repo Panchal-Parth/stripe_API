@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "dns": "^0.2.2",
+    "fetch": "^1.1.0",
+    "material-ui": "^0.19.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
+    "react-split-pane": "^0.1.68",
+    "react-stripe-checkout": "^2.6.3",
+    "uuid": "^3.1.0"
+  },
+  "scripts": {    
+	"start": "react-scripts start REACT_APP_STRIPE_PKEY=pk_test_XNB5Gkou7mwEa8K9c9c2XFYL REACT_APP_CLUSTER_NAME=beseeching73",
+    "build": "REACT_APP_CLUSTER_NAME=beseeching73 react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -28,10 +28,10 @@ Important Notes before usage:
 3. Due to resource availability, only web version is designed and nopt react native one, which will be added later.
 					
 how to execute:
-1.	Install Node software (in windows/linux/any operating system supporting node). Refer to https://nodejs.org  
-2.	Open nodejs command prompt 
-3.	Create a folder for your project and execute command git init in that folder (assuming git is installed).
-4.	Clone this GIT repo completely into your local folder
+1.	Download python from https://www.python.org/downloads/ and select the most appropriate version (I have used python 3.5 for this project) and install it.  
+2.	Open the command prompt and change directory to your folder.
+3.	Activate the virtual environment 
+4.	To run the file just type python and the filename.extension eg: python pay.py
 5.	After cloning successfully, 
 	a. Go to folder hello-react\microservices\api\src and do npm install and then npm start.
 	b. Go to folder hello-react\microservices\ui\app and do npm install and then npm start
@@ -40,7 +40,7 @@ how to execute:
 8.  Backend Server does log some messages.
 
 Support:
-Please contact mr.rajeshr@gmail.com or achuthan.unni@gmail.com for any support.
+Please contact mr.rajeshr@gmail.com or parthpanchal222@gmail.com for any support.
 
 Reference:
 	1. https://stripe.com/docs/charges 
